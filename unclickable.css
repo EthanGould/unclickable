@@ -1,0 +1,158 @@
+html {
+    cursor: pointer;
+    font-family: monospace;
+}
+
+section {
+    margin: 50px;
+}
+
+h1 {
+    margin: 30px auto;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h1 span {
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-delay: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    display: inline-block;
+}
+
+h2 {
+    margin: 30px auto;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p {
+    font-style: italic;
+    color: green;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    transform: translateX(-20%);
+    transition: opacity 0.3s, transform 0.5s;
+    opacity: 0;
+}
+
+p.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+p.show-2 {
+    color: red;
+}
+
+p.show-3 {
+    color: purple;
+    font-size: 1.75rem;
+}
+
+p.show-4 {
+    color: #e69500;
+    font-size: 2rem;
+}
+
+select {
+    all: unset;
+    border: 2px solid purple;
+    padding: 10px 15px;
+}
+
+select:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+label, 
+select {
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 10px 40px;
+    cursor: pointer;
+    border: 3px solid purple;
+    background: radial-gradient(#f596f2, #f8bcf6, #fcdffb);
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    font-family: monospace;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+button:active {
+    background: green;
+}
+
+.btn-wrap {
+    padding: 30px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+
+.btn-wrap.hide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s;
+}
+
+[data-counter] {
+    display: inline-block;
+    transition: transform 0.2s, color 0.2s;
+}
+
+[data-counter].pop {
+    opacity: 1;
+    transform: scale(1.5);
+    color: green;
+}
+
+
+/* Spicy level changes */
+html.spicy {
+    background: #fcfcc9;
+}
+
+.spicy .btn-wrap {
+    padding: 60px;
+}
+
+/* Sniper level changes */
+html.sniper {
+    background: black;
+    color: white;
+    cursor: crosshair;
+}
+
+.sniper .btn-wrap {
+    padding: 120px;
+}
+
+.sniper button {
+    padding: 5px 20px;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(2turn);
+    }
+    
+    100% {
+        transform: rotate(2turn);
+    }
+}
